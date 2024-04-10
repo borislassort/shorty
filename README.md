@@ -1,5 +1,5 @@
 # Shorty
-## A very simple URL shortener in-memory
+## A very simple URL shortener in-memory with [Golang](https://golang.org)
 
 ```bash
 go build -o shorty .
