@@ -22,10 +22,10 @@ func main() {
 }
 
 func shortURL(c *gin.Context) {
-	longURL := c.Param("url")
+	longURL := c.Query("url")
 	shortURL := genShortURL()
 	urlMap[shortURL] = longURL
-	c.JSON(http.StatusOK, gin.H{"shortURL": shortURL})
+	c.JSON(http.StatusOK, gin.H{"longURL": longURL, "shortURL": shortURL})
 }
 
 func redirectURL(c *gin.Context) {
